@@ -1,0 +1,112 @@
+[
+  {
+    "MovieId": 1,
+    "Title": "Avengers: Endgame",
+    "Seasons": [
+      {
+        "SeasonId": 1,
+        "SeasonNumber": 1,
+        "Episodes": [
+          {
+            "EpisodeId": 1,
+            "Title": "The Beginning of the End",
+            "EpisodeNumber": 1
+          },
+          {
+            "EpisodeId": 2,
+            "Title": "Infinity Fallout",
+            "EpisodeNumber": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MovieId": 2,
+    "Title": "The Dark Knight",
+    "Seasons": [
+      {
+        "SeasonId": 2,
+        "SeasonNumber": 1,
+        "Episodes": [
+          {
+            "EpisodeId": 3,
+            "Title": "Joker’s Rise",
+            "EpisodeNumber": 1
+          },
+          {
+            "EpisodeId": 4,
+            "Title": "Gotham’s Chaos",
+            "EpisodeNumber": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MovieId": 3,
+    "Title": "Interstellar",
+    "Seasons": [
+      {
+        "SeasonId": 3,
+        "SeasonNumber": 1,
+        "Episodes": [
+          {
+            "EpisodeId": 5,
+            "Title": "Leaving Earth",
+            "EpisodeNumber": 1
+          },
+          {
+            "EpisodeId": 6,
+            "Title": "Through the Wormhole",
+            "EpisodeNumber": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MovieId": 4,
+    "Title": "Inception",
+    "Seasons": [
+      {
+        "SeasonId": 4,
+        "SeasonNumber": 1,
+        "Episodes": [
+          {
+            "EpisodeId": 7,
+            "Title": "The Dream Begins",
+            "EpisodeNumber": 1
+          },
+          {
+            "EpisodeId": 8,
+            "Title": "Layers of Reality",
+            "EpisodeNumber": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "MovieId": 5,
+    "Title": "The Conjuring",
+    "Seasons": [
+      {
+        "SeasonId": 5,
+        "SeasonNumber": 1,
+        "Episodes": [
+          {
+            "EpisodeId": 9,
+            "Title": "The Haunting",
+            "EpisodeNumber": 1
+          },
+          {
+            "EpisodeId": 10,
+            "Title": "Demonic Presence",
+            "EpisodeNumber": 2
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -15,7 +15,7 @@ namespace auhnuh_server.API.Controllers
             _authService = authService;
         }
 
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody]LoginDTO login)
         {
             var response = await _authService.Login(login);

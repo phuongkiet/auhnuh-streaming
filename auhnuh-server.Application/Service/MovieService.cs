@@ -24,5 +24,10 @@ namespace auhnuh_server.Application.Service
         {
             return await _movieRepository.ListMovie();
         }
+
+        public async Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id)
+        {
+            return await _movieRepository.GetDetail(id);
+        }
     }
 }

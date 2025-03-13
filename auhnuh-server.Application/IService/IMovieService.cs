@@ -8,5 +8,6 @@ namespace auhnuh_server.Application.IService
     public interface IMovieService
     {
         Task<ApiResponseModel<List<ListAllMovieDTO>>> ListMovie();
+        Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id);
     }
 }

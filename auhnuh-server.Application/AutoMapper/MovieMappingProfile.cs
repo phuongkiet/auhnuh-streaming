@@ -16,6 +16,9 @@ namespace auhnuh_server.Application.AutoMapper
                             : new List<string>()))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
                 .ReverseMap();
+
+            CreateMap<Movie, MovieDetailDTO>()
+            .ForMember(dest => dest.MovieCategories, opt => opt.MapFrom(src => src.MovieCategories.Select(mc => mc.Categories.Name).ToList()));
         }
     }
 }

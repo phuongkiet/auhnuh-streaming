@@ -8,5 +8,6 @@ namespace auhnuh_server.Application.IRepository
     public interface IMovieRepository
     {
         Task<ApiResponseModel<List<ListAllMovieDTO>>> ListMovie();
+        Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id);
     }
 }

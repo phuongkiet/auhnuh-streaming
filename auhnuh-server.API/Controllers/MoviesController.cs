@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Application.IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace auhnuh_server.API.Controllers
@@ -13,10 +14,24 @@ namespace auhnuh_server.API.Controllers
             _movieService = movieService;
         }
 
-        [HttpGet]
+        [HttpGet("movies")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Get()
         {
             var response = await _movieService.ListMovie();
+
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+
+            return Ok(response);
+        }
+
+        [HttpGet("movie-detail")]
+        public async Task<IActionResult> GetDetail(int id)
+        {
+            var response = await _movieService.GetDetail(id);
 
             if (!response.Success)
             {

@@ -15,6 +15,54 @@
         "MovieId": 1,
         "CategoryId": 1
       }
+    ],
+    "Seasons": [
+      {
+        "Id": 1,
+        "MovieId": 1,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2019-04-26T00:00:00Z",
+        "UpdatedAt": "2019-04-26T00:00:00Z",
+        "Episodes": [
+          {
+            "Id": 1,
+            "SeasonId": 1,
+            "EpisodeNumber": 1,
+            "Title": "Reunion",
+            "Description": "The team regroups after the snap.",
+            "Duration": 45,
+            "VideoUrl": "",
+            "ReleaseDate": "2019-04-26T00:00:00Z",
+            "CreatedAt": "2019-04-26T00:00:00Z",
+            "UpdatedAt": "2019-04-26T00:00:00Z"
+          },
+          {
+            "Id": 2,
+            "SeasonId": 1,
+            "EpisodeNumber": 2,
+            "Title": "The Plan",
+            "Description": "A risky mission is planned.",
+            "Duration": 50,
+            "VideoUrl": "",
+            "ReleaseDate": "2019-04-27T00:00:00Z",
+            "CreatedAt": "2019-04-27T00:00:00Z",
+            "UpdatedAt": "2019-04-27T00:00:00Z"
+          },
+          {
+            "Id": 3,
+            "SeasonId": 1,
+            "EpisodeNumber": 3,
+            "Title": "Final Battle",
+            "Description": "The ultimate fight against Thanos.",
+            "Duration": 55,
+            "VideoUrl": "",
+            "ReleaseDate": "2019-04-28T00:00:00Z",
+            "CreatedAt": "2019-04-28T00:00:00Z",
+            "UpdatedAt": "2019-04-28T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
