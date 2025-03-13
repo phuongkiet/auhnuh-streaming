@@ -1,0 +1,13 @@
+﻿using auhnuh_server.Common.Attibutes;
+using auhnuh_server.Domain.Common;
+using auhnuh_server.Domain.DTO.WebRequest.Auth;
+using auhnuh_server.Domain.DTO.WebResponse.Auth;
+
+namespace auhnuh_server.Application.IRepository
+{
+    [AutoRegister]
+    public interface IAuthRepository
+    {
+        Task<ApiResponseModel<LoginResponseDTO>> Login(LoginDTO login);
+    }
+}

@@ -16,7 +16,14 @@ namespace auhnuh_server.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _movieService.ListMovie());
+            var response = await _movieService.ListMovie();
+
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+
+            return Ok(response);
         }
     }
 }
