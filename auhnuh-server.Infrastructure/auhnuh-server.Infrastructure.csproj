@@ -26,8 +26,4 @@
     <ProjectReference Include="..\auhnuh-server.Common\auhnuh-server.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Seed\" />
-  </ItemGroup>
-
 </Project>

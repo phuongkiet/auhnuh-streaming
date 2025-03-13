@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using auhnuh_server.Domain.Common;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace auhnuh_server.Domain
     {
         public string Name { get; set; }
         public DateTime Birthday { get; set; }
+        public UserStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int RoleId { get; set; }

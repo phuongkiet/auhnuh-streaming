@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "Name": "Action",
+    "Description": "Exciting movies with intense sequences."
+  },
+  {
+    "Id": 2,
+    "Name": "Comedy",
+    "Description": "Movies that aim to make the audience laugh."
+  },
+  {
+    "Id": 3,
+    "Name": "Drama",
+    "Description": "Serious, narrative-driven films."
+  },
+  {
+    "Id": 4,
+    "Name": "Horror",
+    "Description": "Scary movies designed to frighten and shock."
+  },
+  {
+    "Id": 5,
+    "Name": "Sci-Fi",
+    "Description": "Science fiction films with futuristic elements."
+  },
+  {
+    "Id": 6,
+    "Name": "Romance",
+    "Description": "Love stories and emotional relationships."
+  },
+  {
+    "Id": 7,
+    "Name": "Thriller",
+    "Description": "Suspenseful movies with twists and tension."
+  },
+  {
+    "Id": 8,
+    "Name": "Fantasy",
+    "Description": "Movies with magical and supernatural elements."
+  },
+  {
+    "Id": 9,
+    "Name": "Documentary",
+    "Description": "Non-fiction films based on real events."
+  },
+  {
+    "Id": 10,
+    "Name": "Animation",
+    "Description": "Movies created using animated visuals."
+  }
+]

@@ -1,4 +1,9 @@
 ﻿using auhnuh_server.Common.Attibutes;
+using auhnuh_server.Domain;
+using auhnuh_server.Infrastructure.Data;
+using auhnuh_server.Infrastructure.Data.Seed;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -36,6 +41,19 @@ namespace auhnuh_server.Infrastructure
             }
 
             return services;
+        }
+        public static async Task<IApplicationBuilder> SeedData(this IApplicationBuilder app)
+        {
+            using var scope = app.ApplicationServices.CreateScope();
+            var dbContext = scope.ServiceProvider.GetRequiredService<MovieDbContext>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
+
+            await Seed.SeedUser(dbContext, userManager, roleManager);
+            await Seed.SeedCategoryFromJson(dbContext);
+            await Seed.SeedMovieFromJson(dbContext);
+
+            return app;
         }
     }
 }

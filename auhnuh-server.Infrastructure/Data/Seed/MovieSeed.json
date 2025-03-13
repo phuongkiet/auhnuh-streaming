@@ -1,0 +1,146 @@
+[
+  {
+    "MovieId": 1,
+    "Title": "Avengers: Endgame",
+    "Description": "The Avengers assemble once more to undo Thanos' actions and restore order to the universe.",
+    "ReleaseDate": "2019-04-26T00:00:00Z",
+    "Publisher": "Marvel Studios",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 1,
+    "CreatedAt": "2019-04-26T00:00:00Z",
+    "UpdatedAt": "2019-04-26T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 1,
+        "CategoryId": 1
+      }
+    ]
+  },
+  {
+    "MovieId": 2,
+    "Title": "The Dark Knight",
+    "Description": "Batman battles the Joker, a criminal mastermind wreaking havoc on Gotham City.",
+    "ReleaseDate": "2008-07-18T00:00:00Z",
+    "Publisher": "Warner Bros.",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 1,
+    "CreatedAt": "2008-07-18T00:00:00Z",
+    "UpdatedAt": "2008-07-18T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 2,
+        "CategoryId": 1
+      }
+    ]
+  },
+  {
+    "MovieId": 3,
+    "Title": "Interstellar",
+    "Description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "ReleaseDate": "2014-11-07T00:00:00Z",
+    "Publisher": "Paramount Pictures",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 0,
+    "CreatedAt": "2014-11-07T00:00:00Z",
+    "UpdatedAt": "2014-11-07T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 3,
+        "CategoryId": 9
+      }
+    ]
+  },
+  {
+    "MovieId": 4,
+    "Title": "Inception",
+    "Description": "A skilled thief, who steals corporate secrets through dream-sharing technology, is given a chance at redemption.",
+    "ReleaseDate": "2010-07-16T00:00:00Z",
+    "Publisher": "Warner Bros.",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 0,
+    "CreatedAt": "2010-07-16T00:00:00Z",
+    "UpdatedAt": "2010-07-16T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 4,
+        "CategoryId": 8
+      }
+    ]
+  },
+  {
+    "MovieId": 5,
+    "Title": "The Conjuring",
+    "Description": "Paranormal investigators work to help a family terrorized by a dark presence in their farmhouse.",
+    "ReleaseDate": "2013-07-19T00:00:00Z",
+    "Publisher": "Warner Bros.",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 1,
+    "CreatedAt": "2013-07-19T00:00:00Z",
+    "UpdatedAt": "2013-07-19T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 5,
+        "CategoryId": 7
+      }
+    ]
+  },
+  {
+    "MovieId": 6,
+    "Title": "Finding Nemo",
+    "Description": "A clownfish embarks on a journey to rescue his son who was taken to a fish tank in Sydney.",
+    "ReleaseDate": "2003-05-30T00:00:00Z",
+    "Publisher": "Pixar Animation Studios",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 1,
+    "CreatedAt": "2003-05-30T00:00:00Z",
+    "UpdatedAt": "2003-05-30T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 6,
+        "CategoryId": 10
+      }
+    ]
+  },
+  {
+    "MovieId": 7,
+    "Title": "The Notebook",
+    "Description": "A young couple falls in love in the 1940s despite societal pressures.",
+    "ReleaseDate": "2004-06-25T00:00:00Z",
+    "Publisher": "New Line Cinema",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 1,
+    "CreatedAt": "2004-06-25T00:00:00Z",
+    "UpdatedAt": "2004-06-25T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 7,
+        "CategoryId": 6
+      }
+    ]
+  },
+  {
+    "MovieId": 8,
+    "Title": "Parasite",
+    "Description": "A poor family schemes to become employed by a wealthy family by posing as unrelated, highly qualified individuals.",
+    "ReleaseDate": "2019-05-30T00:00:00Z",
+    "Publisher": "CJ Entertainment",
+    "TotalSeason": 1,
+    "Thumbnail": "",
+    "Status": 0,
+    "CreatedAt": "2019-05-30T00:00:00Z",
+    "UpdatedAt": "2019-05-30T00:00:00Z",
+    "MovieCategories": [
+      {
+        "MovieId": 8,
+        "CategoryId": 7
+      }
+    ]
+  }
+]
