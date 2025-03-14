@@ -2,6 +2,7 @@
 using auhnuh_server.Application.IService;
 using auhnuh_server.Common.Attibutes;
 using auhnuh_server.Domain.Common;
+using auhnuh_server.Domain.DTO.WebRequest.Movie;
 using auhnuh_server.Domain.DTO.WebResponse.Movie;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,11 @@ namespace auhnuh_server.Application.Service
         public async Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id)
         {
             return await _movieRepository.GetDetail(id);
+        }
+
+        public async Task<ApiResponseModel<MovieAfterAddResponseDTO>> AddMovie(AddMovieDTO movie, CancellationToken cancellationToken)
+        {
+            return await _movieRepository.AddMovie(movie, cancellationToken);
         }
     }
 }

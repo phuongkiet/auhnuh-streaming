@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Application.IService;
+using auhnuh_server.Domain.DTO.WebRequest.Movie;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,6 +39,12 @@ namespace auhnuh_server.API.Controllers
                 return BadRequest(response);
             }
 
+            return Ok(response);
+        }
+        [HttpPost("add-movie")]
+        public async Task<IActionResult> AddMovie([FromBody] AddMovieDTO movie, CancellationToken cancellationToken)
+        {
+            var response = await _movieService.AddMovie(movie, cancellationToken);
             return Ok(response);
         }
     }

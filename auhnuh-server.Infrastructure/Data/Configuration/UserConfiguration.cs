@@ -19,7 +19,7 @@ namespace auhnuh_server.Infrastructure.Data.Configuration
             builder.HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.RoleId)
-                .OnDelete(DeleteBehavior.SetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired(false);
         }
     }

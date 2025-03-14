@@ -1,6 +1,5 @@
 [
   {
-    "MovieId": 1,
     "Title": "Avengers: Endgame",
     "Description": "The Avengers assemble once more to undo Thanos' actions and restore order to the universe.",
     "ReleaseDate": "2019-04-26T00:00:00Z",
@@ -18,7 +17,6 @@
     ],
     "Seasons": [
       {
-        "Id": 1,
         "MovieId": 1,
         "SeasonNumber": 1,
         "TotalEpisode": 3,
@@ -26,7 +24,6 @@
         "UpdatedAt": "2019-04-26T00:00:00Z",
         "Episodes": [
           {
-            "Id": 1,
             "SeasonId": 1,
             "EpisodeNumber": 1,
             "Title": "Reunion",
@@ -38,7 +35,6 @@
             "UpdatedAt": "2019-04-26T00:00:00Z"
           },
           {
-            "Id": 2,
             "SeasonId": 1,
             "EpisodeNumber": 2,
             "Title": "The Plan",
@@ -50,7 +46,6 @@
             "UpdatedAt": "2019-04-27T00:00:00Z"
           },
           {
-            "Id": 3,
             "SeasonId": 1,
             "EpisodeNumber": 3,
             "Title": "Final Battle",
@@ -66,7 +61,6 @@
     ]
   },
   {
-    "MovieId": 2,
     "Title": "The Dark Knight",
     "Description": "Batman battles the Joker, a criminal mastermind wreaking havoc on Gotham City.",
     "ReleaseDate": "2008-07-18T00:00:00Z",
@@ -81,10 +75,53 @@
         "MovieId": 2,
         "CategoryId": 1
       }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 2,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2008-07-18T00:00:00Z",
+        "UpdatedAt": "2008-07-18T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 2,
+            "EpisodeNumber": 1,
+            "Title": "Rise of the Joker",
+            "Description": "The Joker makes his move on Gotham.",
+            "Duration": 48,
+            "VideoUrl": "",
+            "ReleaseDate": "2008-07-18T00:00:00Z",
+            "CreatedAt": "2008-07-18T00:00:00Z",
+            "UpdatedAt": "2008-07-18T00:00:00Z"
+          },
+          {
+            "SeasonId": 2,
+            "EpisodeNumber": 2,
+            "Title": "Harvey's Fall",
+            "Description": "Harvey Dent's transformation begins.",
+            "Duration": 50,
+            "VideoUrl": "",
+            "ReleaseDate": "2008-07-19T00:00:00Z",
+            "CreatedAt": "2008-07-19T00:00:00Z",
+            "UpdatedAt": "2008-07-19T00:00:00Z"
+          },
+          {
+            "SeasonId": 2,
+            "EpisodeNumber": 3,
+            "Title": "Knightfall",
+            "Description": "Batman faces his greatest challenge yet.",
+            "Duration": 55,
+            "VideoUrl": "",
+            "ReleaseDate": "2008-07-20T00:00:00Z",
+            "CreatedAt": "2008-07-20T00:00:00Z",
+            "UpdatedAt": "2008-07-20T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
-    "MovieId": 3,
     "Title": "Interstellar",
     "Description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
     "ReleaseDate": "2014-11-07T00:00:00Z",
@@ -99,10 +136,53 @@
         "MovieId": 3,
         "CategoryId": 9
       }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 3,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2014-11-07T00:00:00Z",
+        "UpdatedAt": "2014-11-07T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 3,
+            "EpisodeNumber": 1,
+            "Title": "Departure",
+            "Description": "The team embarks on their journey through space.",
+            "Duration": 47,
+            "VideoUrl": "",
+            "ReleaseDate": "2014-11-07T00:00:00Z",
+            "CreatedAt": "2014-11-07T00:00:00Z",
+            "UpdatedAt": "2014-11-07T00:00:00Z"
+          },
+          {
+            "SeasonId": 3,
+            "EpisodeNumber": 2,
+            "Title": "The Wormhole",
+            "Description": "The team crosses into another galaxy.",
+            "Duration": 52,
+            "VideoUrl": "",
+            "ReleaseDate": "2014-11-08T00:00:00Z",
+            "CreatedAt": "2014-11-08T00:00:00Z",
+            "UpdatedAt": "2014-11-08T00:00:00Z"
+          },
+          {
+            "SeasonId": 3,
+            "EpisodeNumber": 3,
+            "Title": "Time Dilation",
+            "Description": "The team faces the consequences of time relativity.",
+            "Duration": 56,
+            "VideoUrl": "",
+            "ReleaseDate": "2014-11-09T00:00:00Z",
+            "CreatedAt": "2014-11-09T00:00:00Z",
+            "UpdatedAt": "2014-11-09T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
-    "MovieId": 4,
     "Title": "Inception",
     "Description": "A skilled thief, who steals corporate secrets through dream-sharing technology, is given a chance at redemption.",
     "ReleaseDate": "2010-07-16T00:00:00Z",
@@ -117,10 +197,53 @@
         "MovieId": 4,
         "CategoryId": 8
       }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 4,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2010-07-16T00:00:00Z",
+        "UpdatedAt": "2010-07-16T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 4,
+            "EpisodeNumber": 1,
+            "Title": "The Heist Begins",
+            "Description": "Dom Cobb assembles his team for the dream heist.",
+            "Duration": 48,
+            "VideoUrl": "",
+            "ReleaseDate": "2010-07-16T00:00:00Z",
+            "CreatedAt": "2010-07-16T00:00:00Z",
+            "UpdatedAt": "2010-07-16T00:00:00Z"
+          },
+          {
+            "SeasonId": 4,
+            "EpisodeNumber": 2,
+            "Title": "Dream Within a Dream",
+            "Description": "The team dives deeper into the layers of dreams.",
+            "Duration": 51,
+            "VideoUrl": "",
+            "ReleaseDate": "2010-07-17T00:00:00Z",
+            "CreatedAt": "2010-07-17T00:00:00Z",
+            "UpdatedAt": "2010-07-17T00:00:00Z"
+          },
+          {
+            "SeasonId": 4,
+            "EpisodeNumber": 3,
+            "Title": "Limbo",
+            "Description": "Cobb faces his past in the depths of limbo.",
+            "Duration": 55,
+            "VideoUrl": "",
+            "ReleaseDate": "2010-07-18T00:00:00Z",
+            "CreatedAt": "2010-07-18T00:00:00Z",
+            "UpdatedAt": "2010-07-18T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
-    "MovieId": 5,
     "Title": "The Conjuring",
     "Description": "Paranormal investigators work to help a family terrorized by a dark presence in their farmhouse.",
     "ReleaseDate": "2013-07-19T00:00:00Z",
@@ -135,10 +258,53 @@
         "MovieId": 5,
         "CategoryId": 7
       }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 5,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2013-07-19T00:00:00Z",
+        "UpdatedAt": "2013-07-19T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 5,
+            "EpisodeNumber": 1,
+            "Title": "The Haunting Begins",
+            "Description": "The Perron family moves into their new home, unaware of the horrors that await.",
+            "Duration": 50,
+            "VideoUrl": "",
+            "ReleaseDate": "2013-07-19T00:00:00Z",
+            "CreatedAt": "2013-07-19T00:00:00Z",
+            "UpdatedAt": "2013-07-19T00:00:00Z"
+          },
+          {
+            "SeasonId": 5,
+            "EpisodeNumber": 2,
+            "Title": "Demonic Presence",
+            "Description": "Paranormal investigators Ed and Lorraine Warren arrive to investigate the dark forces at play.",
+            "Duration": 53,
+            "VideoUrl": "",
+            "ReleaseDate": "2013-07-20T00:00:00Z",
+            "CreatedAt": "2013-07-20T00:00:00Z",
+            "UpdatedAt": "2013-07-20T00:00:00Z"
+          },
+          {
+            "SeasonId": 5,
+            "EpisodeNumber": 3,
+            "Title": "The Exorcism",
+            "Description": "The Warrens perform a desperate exorcism to rid the house of its evil entity.",
+            "Duration": 57,
+            "VideoUrl": "",
+            "ReleaseDate": "2013-07-21T00:00:00Z",
+            "CreatedAt": "2013-07-21T00:00:00Z",
+            "UpdatedAt": "2013-07-21T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
-    "MovieId": 6,
     "Title": "Finding Nemo",
     "Description": "A clownfish embarks on a journey to rescue his son who was taken to a fish tank in Sydney.",
     "ReleaseDate": "2003-05-30T00:00:00Z",
@@ -153,10 +319,53 @@
         "MovieId": 6,
         "CategoryId": 10
       }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 6,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2003-05-30T00:00:00Z",
+        "UpdatedAt": "2003-05-30T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 6,
+            "EpisodeNumber": 1,
+            "Title": "The Reef",
+            "Description": "Marlin and Nemo live peacefully in their sea anemone home.",
+            "Duration": 46,
+            "VideoUrl": "",
+            "ReleaseDate": "2003-05-30T00:00:00Z",
+            "CreatedAt": "2003-05-30T00:00:00Z",
+            "UpdatedAt": "2003-05-30T00:00:00Z"
+          },
+          {
+            "SeasonId": 6,
+            "EpisodeNumber": 2,
+            "Title": "The Capture",
+            "Description": "Nemo is taken by divers and placed in a fish tank in Sydney.",
+            "Duration": 50,
+            "VideoUrl": "",
+            "ReleaseDate": "2003-05-31T00:00:00Z",
+            "CreatedAt": "2003-05-31T00:00:00Z",
+            "UpdatedAt": "2003-05-31T00:00:00Z"
+          },
+          {
+            "SeasonId": 6,
+            "EpisodeNumber": 3,
+            "Title": "The Escape Plan",
+            "Description": "Marlin and Dory embark on their adventure to find Nemo.",
+            "Duration": 54,
+            "VideoUrl": "",
+            "ReleaseDate": "2003-06-01T00:00:00Z",
+            "CreatedAt": "2003-06-01T00:00:00Z",
+            "UpdatedAt": "2003-06-01T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
-    "MovieId": 7,
     "Title": "The Notebook",
     "Description": "A young couple falls in love in the 1940s despite societal pressures.",
     "ReleaseDate": "2004-06-25T00:00:00Z",
@@ -171,10 +380,53 @@
         "MovieId": 7,
         "CategoryId": 6
       }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 7,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2004-06-25T00:00:00Z",
+        "UpdatedAt": "2004-06-25T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 7,
+            "EpisodeNumber": 1,
+            "Title": "First Meeting",
+            "Description": "Noah and Allie meet for the first time at a carnival.",
+            "Duration": 48,
+            "VideoUrl": "",
+            "ReleaseDate": "2004-06-25T00:00:00Z",
+            "CreatedAt": "2004-06-25T00:00:00Z",
+            "UpdatedAt": "2004-06-25T00:00:00Z"
+          },
+          {
+            "SeasonId": 7,
+            "EpisodeNumber": 2,
+            "Title": "Summer Romance",
+            "Description": "Noah and Allie fall in love over the summer.",
+            "Duration": 50,
+            "VideoUrl": "",
+            "ReleaseDate": "2004-06-26T00:00:00Z",
+            "CreatedAt": "2004-06-26T00:00:00Z",
+            "UpdatedAt": "2004-06-26T00:00:00Z"
+          },
+          {
+            "SeasonId": 7,
+            "EpisodeNumber": 3,
+            "Title": "Reunion",
+            "Description": "Years later, Noah and Allie find their way back to each other.",
+            "Duration": 55,
+            "VideoUrl": "",
+            "ReleaseDate": "2004-06-27T00:00:00Z",
+            "CreatedAt": "2004-06-27T00:00:00Z",
+            "UpdatedAt": "2004-06-27T00:00:00Z"
+          }
+        ]
+      }
     ]
   },
   {
-    "MovieId": 8,
     "Title": "Parasite",
     "Description": "A poor family schemes to become employed by a wealthy family by posing as unrelated, highly qualified individuals.",
     "ReleaseDate": "2019-05-30T00:00:00Z",
@@ -188,6 +440,50 @@
       {
         "MovieId": 8,
         "CategoryId": 7
+      }
+    ],
+    "Seasons": [
+      {
+        "MovieId": 8,
+        "SeasonNumber": 1,
+        "TotalEpisode": 3,
+        "CreatedAt": "2019-05-30T00:00:00Z",
+        "UpdatedAt": "2019-05-30T00:00:00Z",
+        "Episodes": [
+          {
+            "SeasonId": 8,
+            "EpisodeNumber": 1,
+            "Title": "The Plan",
+            "Description": "The Kim family infiltrates the wealthy Park household.",
+            "Duration": 50,
+            "VideoUrl": "",
+            "ReleaseDate": "2019-05-30T00:00:00Z",
+            "CreatedAt": "2019-05-30T00:00:00Z",
+            "UpdatedAt": "2019-05-30T00:00:00Z"
+          },
+          {
+            "SeasonId": 8,
+            "EpisodeNumber": 2,
+            "Title": "Secrets Uncovered",
+            "Description": "The Kims discover a hidden secret in the Park household.",
+            "Duration": 52,
+            "VideoUrl": "",
+            "ReleaseDate": "2019-05-31T00:00:00Z",
+            "CreatedAt": "2019-05-31T00:00:00Z",
+            "UpdatedAt": "2019-05-31T00:00:00Z"
+          },
+          {
+            "SeasonId": 8,
+            "EpisodeNumber": 3,
+            "Title": "The Reckoning",
+            "Description": "Tensions rise, leading to an explosive confrontation.",
+            "Duration": 55,
+            "VideoUrl": "",
+            "ReleaseDate": "2019-06-01T00:00:00Z",
+            "CreatedAt": "2019-06-01T00:00:00Z",
+            "UpdatedAt": "2019-06-01T00:00:00Z"
+          }
+        ]
       }
     ]
   }

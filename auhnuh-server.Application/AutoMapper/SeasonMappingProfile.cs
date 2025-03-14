@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Domain;
+using auhnuh_server.Domain.DTO.WebRequest.Season;
 using auhnuh_server.Domain.DTO.WebResponse.Season;
 using AutoMapper;
 using System;
@@ -14,6 +15,7 @@ namespace auhnuh_server.Application.AutoMapper
         public SeasonMappingProfile() 
         {
             CreateMap<Season, SeasonDTO>().ReverseMap();
+            CreateMap<AddSeasonDTO, Season>().ReverseMap();
         }
     }
 }

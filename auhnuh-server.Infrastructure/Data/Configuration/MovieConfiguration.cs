@@ -9,8 +9,7 @@ namespace auhnuh_server.Infrastructure.Data.Configuration
         public void Configure(EntityTypeBuilder<Movie> builder)
         {
             // Primary Key
-            builder.HasKey(m => m.MovieId);
-            builder.Property(m => m.MovieId).ValueGeneratedOnAdd();
+
 
             // Properties
             builder.Property(m => m.Title)

@@ -2,10 +2,12 @@
 using auhnuh_server.Common.Attibutes;
 using auhnuh_server.Domain;
 using auhnuh_server.Domain.Common;
+using auhnuh_server.Domain.DTO.WebRequest.Movie;
 using auhnuh_server.Domain.DTO.WebResponse.Movie;
 using auhnuh_server.Infrastructure.Data.Interfaces;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using System.Threading;
 
 namespace auhnuh_server.Infrastructure.Repository
 {
@@ -86,5 +88,62 @@ namespace auhnuh_server.Infrastructure.Repository
 
             return response;
         }
+
+        public async Task<ApiResponseModel<MovieAfterAddResponseDTO>> AddMovie(AddMovieDTO movie, CancellationToken cancellationToken)
+        {
+            var response = new ApiResponseModel<MovieAfterAddResponseDTO>();
+
+            var existingMovie = await _context.CreateSet<Movie>()
+                                              .FirstOrDefaultAsync(m => m.Title == movie.Title && m.ReleaseDate == movie.ReleaseDate, cancellationToken);
+
+            if (existingMovie == null)
+            {
+                var result = new Movie
+                {
+                    Title = movie.Title,
+                    Publisher = movie.Publisher,
+                    ReleaseDate = movie.ReleaseDate,
+                    TotalSeason = movie.TotalSeason,
+                    Description = movie.Description,
+                    Status = movie.Status,
+                    Thumbnail = movie.Thumbnail,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                };
+
+                await _context.CreateSet<Movie>().AddAsync(result, cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
+
+                if (movie.MovieCategories != null && movie.MovieCategories.Any())
+                {
+                    var movieCategory = movie.MovieCategories.Select(mc => new MovieCategory
+                    {
+                        MovieId = result.MovieId,
+                        CategoryId = mc.CategoryId,
+                    }).ToList();
+
+                    await _context.CreateSet<MovieCategory>().AddRangeAsync(movieCategory, cancellationToken);
+                    await _context.SaveChangesAsync(cancellationToken);
+                }
+
+                response.Data = new MovieAfterAddResponseDTO
+                {
+                    Title = movie.Title,
+                    Publisher = movie.Publisher,
+                    ReleaseDate = movie.ReleaseDate,
+                    TotalSeason = movie.TotalSeason,
+                    Description = movie.Description,
+                    Status = movie.Status.ToString(),
+                    Thumbnail = movie.Thumbnail,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                };
+
+                return response;
+            }
+
+            response.Errors.Add("The movie is exist!");
+            return response;
+        } 
     }
 }

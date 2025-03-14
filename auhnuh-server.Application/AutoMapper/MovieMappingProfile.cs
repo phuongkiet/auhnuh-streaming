@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Domain;
+using auhnuh_server.Domain.DTO.WebRequest.Movie;
 using auhnuh_server.Domain.DTO.WebResponse.Movie;
 using AutoMapper;
 
@@ -19,6 +20,11 @@ namespace auhnuh_server.Application.AutoMapper
 
             CreateMap<Movie, MovieDetailDTO>()
             .ForMember(dest => dest.MovieCategories, opt => opt.MapFrom(src => src.MovieCategories.Select(mc => mc.Categories.Name).ToList()));
+
+            CreateMap<Movie, MovieAfterAddResponseDTO>().ReverseMap();
+
+            CreateMap<AddMovieDTO, Movie>().ReverseMap();
+            CreateMap<UpdateMovieDTO, Movie>().ReverseMap();
         }
     }
 }

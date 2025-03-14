@@ -26,7 +26,8 @@ namespace auhnuh_server.Infrastructure.Data
         {
             if (optionsBuilder.IsConfigured) return;
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=auhnuh;Username=postgres;Password=12345");
+            //optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=auhnuh;Username=postgres;Password=12345");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=auhnuh;uid=sa;pwd=12345;Trusted_Connection=False;TrustServerCertificate=True;");
 
             if (ApplicationEnvironment.IsDevelopment())
                 optionsBuilder.EnableSensitiveDataLogging()

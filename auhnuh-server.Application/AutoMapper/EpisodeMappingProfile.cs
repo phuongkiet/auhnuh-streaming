@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Domain;
+using auhnuh_server.Domain.DTO.WebRequest.Episode;
 using auhnuh_server.Domain.DTO.WebResponse.Episode;
 using AutoMapper;
 using System;
@@ -14,6 +15,7 @@ namespace auhnuh_server.Application.AutoMapper
         public EpisodeMappingProfile() 
         {
             CreateMap<Episode, EpisodeDTO>().ReverseMap();
+            CreateMap<AddEpisodeDTO, Episode>().ReverseMap();
         }
     }
 }

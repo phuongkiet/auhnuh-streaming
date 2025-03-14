@@ -13,6 +13,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.13">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -24,6 +25,10 @@
   <ItemGroup>
     <ProjectReference Include="..\auhnuh-server.Application\auhnuh-server.Application.csproj" />
     <ProjectReference Include="..\auhnuh-server.Common\auhnuh-server.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
