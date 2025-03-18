@@ -14,6 +14,7 @@ namespace auhnuh_server.Domain
         public string Title { get; set; }
         public string Description { get; set; }
         public int Duration { get; set; }
+        public string Thumbnail { get; set; }
         public string VideoUrl { get; set; }
         public DateTime ReleaseDate { get; set; }
         public DateTime CreatedAt { get; set; }

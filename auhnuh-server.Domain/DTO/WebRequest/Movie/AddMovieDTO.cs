@@ -16,6 +16,8 @@ namespace auhnuh_server.Domain.DTO.WebRequest.Movie
         public string Publisher { get; set; }
         public int TotalSeason { get; set; }
         public string Thumbnail { get; set; }
+        public string? Casts { get; set; }
+        public string? Directors { get; set; }
         public MovieStatus Status { get; set; }
         public List<MovieCategoryDTO> MovieCategories { get; set; }
     }

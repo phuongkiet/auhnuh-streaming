@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace auhnuh_server.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/movie")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
@@ -16,7 +16,6 @@ namespace auhnuh_server.API.Controllers
         }
 
         [HttpGet("movies")]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Get()
         {
             var response = await _movieService.ListMovie();

@@ -15,6 +15,8 @@ namespace auhnuh_server.Domain
         public string Publisher { get; set; }
         public int TotalSeason { get; set; }
         public string? Thumbnail { get; set; }
+        public string? Casts { get; set; } 
+        public string? Directors { get; set; }
         public MovieStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }

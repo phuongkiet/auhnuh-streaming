@@ -1,4 +1,5 @@
-﻿using auhnuh_server.Domain;
+﻿using auhnuh_server.API.Setting;
+using auhnuh_server.Domain;
 using auhnuh_server.Infrastructure.Data;
 using auhnuh_server.Infrastructure.Data.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -11,6 +12,26 @@ namespace auhnuh_server.API
 {
     public static class DependencyInjection
     {
+        public static IServiceCollection AddAppCors(this IServiceCollection services, IConfiguration configuration)
+        {
+            var corsSettings = configuration.GetSection(nameof(CorsSetting)).Get<CorsSetting>();
+            ArgumentNullException.ThrowIfNull(corsSettings, nameof(CorsSetting));
+            services.AddCors(options => {
+                foreach (var policy in corsSettings.Policies)
+                {
+                    options.AddPolicy(
+                        policy.Name, builder => {
+                            builder.WithOrigins(policy.AllowedOrigins)
+                                .WithMethods(policy.AllowedMethods)
+                                .WithHeaders(policy.AllowedHeaders);
+                            if (policy.AllowCredentials)
+                                builder.AllowCredentials();
+                        }
+                    );
+                }
+            });
+            return services;
+        }
         public static IServiceCollection AddCustomSwaggerGen(this IServiceCollection services)
         {
             services.AddSwaggerGen(option =>

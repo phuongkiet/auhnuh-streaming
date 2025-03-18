@@ -12,6 +12,7 @@ builder.Services.AddApplicationServices();
 builder.Services.AddControllers();
 builder.Services.AddCustomIdentity();
 builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddAppCors(builder.Configuration);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -28,7 +29,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
+
+app.UseCors("AllowReactApp");
 
 app.MapControllers();
 

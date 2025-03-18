@@ -21,5 +21,10 @@ namespace auhnuh_server.Application.Service
         {
             return await _authRepository.Login(login);
         }
+
+        public async Task<ApiResponseModel<AccountResponseDTO>> GetCurrentUser(string email)
+        {
+            return await _authRepository.GetCurrentUser(email);
+        }
     }
 }

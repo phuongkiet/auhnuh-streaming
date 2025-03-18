@@ -6,6 +6,7 @@ using auhnuh_server.Domain.DTO.WebRequest.Auth;
 using auhnuh_server.Domain.DTO.WebResponse.Auth;
 using auhnuh_server.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -99,6 +100,41 @@ namespace auhnuh_server.Infrastructure.Repository
             response.Data = loginAcc;
 
             return response;
+        }
+
+        public async Task<ApiResponseModel<AccountResponseDTO>> GetCurrentUser(string email)
+        {
+            var result = new ApiResponseModel<AccountResponseDTO>();
+
+            try
+            {
+                var user = await _userManager.Users
+                    .FirstOrDefaultAsync(x => x.Email == email);
+                
+                await _userManager.UpdateAsync(user);
+
+                //Get roles
+                var userRole = await _userManager.GetRolesAsync(user);
+
+                var currentUser = new AccountResponseDTO
+                {
+                    Id = user.Id,
+                    Username = user.UserName,
+                    Birthday = user.Birthday,
+                    Name = user.Name,
+                    Email = user.Email,
+                    Token = CreateToken(user),
+                    PhoneNumber = user.PhoneNumber,
+                    Status = user.Status.ToString(),
+                    Role = userRole.ToList()
+                };
+                result.Data = currentUser;
+            }
+            catch (Exception ex)
+            {
+                result.Errors.Add(ex.Message);
+            }
+            return result;
         }
 
         public string CreateToken(User user)

@@ -9,5 +9,6 @@ namespace auhnuh_server.Application.IRepository
     public interface IAuthRepository
     {
         Task<ApiResponseModel<LoginResponseDTO>> Login(LoginDTO login);
+        Task<ApiResponseModel<AccountResponseDTO>> GetCurrentUser(string email);
     }
 }

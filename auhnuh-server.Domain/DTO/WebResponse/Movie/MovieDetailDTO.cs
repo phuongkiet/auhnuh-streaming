@@ -17,6 +17,8 @@ namespace auhnuh_server.Domain.DTO.WebResponse.Movie
         public int TotalSeason { get; set; }
         public string? Thumbnail { get; set; }
         public string Status { get; set; }
+        public string? Casts { get; set; }
+        public string? Directors { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public List<string> MovieCategories { get; set; }
