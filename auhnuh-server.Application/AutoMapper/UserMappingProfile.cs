@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Domain;
+using auhnuh_server.Domain.DTO.WebRequest.User;
 using auhnuh_server.Domain.DTO.WebResponse.User;
 using AutoMapper;
 using System;
@@ -14,6 +15,13 @@ namespace auhnuh_server.Application.AutoMapper
         public UserMappingProfile()
         {
             CreateMap<User, UserDTO>()
+                .ForMember(des => des.RoleName, opt => opt.MapFrom(src => src.Role.Name))
+                .ReverseMap();
+
+            CreateMap<AddUserDTO, User>()
+                .ReverseMap();
+
+            CreateMap<UpdateUserDTO, User>()
                 .ReverseMap();
         }
     }

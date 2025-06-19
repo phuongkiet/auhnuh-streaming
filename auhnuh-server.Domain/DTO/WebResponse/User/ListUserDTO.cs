@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace auhnuh_server.Domain.DTO.WebResponse.User
 {
-    public class UserDTO
+    public class ListUserDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -18,6 +18,6 @@ namespace auhnuh_server.Domain.DTO.WebResponse.User
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int RoleId { get; set; }
-        public string RoleName { get; set; }
+        public Role Role { get; set; }
     }
 }
