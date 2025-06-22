@@ -2,6 +2,7 @@
 using auhnuh_server.Application.IService;
 using auhnuh_server.Common.Attibutes;
 using auhnuh_server.Domain.Common;
+using auhnuh_server.Domain.Common.ResponseModel;
 using auhnuh_server.Domain.DTO.WebRequest.Movie;
 using auhnuh_server.Domain.DTO.WebResponse.Movie;
 using System;
@@ -26,12 +27,17 @@ namespace auhnuh_server.Application.Service
             return await _movieRepository.ListMovie();
         }
 
+        public async Task<PagedModel<ListAllMovieDTO>> ListMovieAdmin(int pageSize, int pageNumber, string? term)
+        {
+            return await _movieRepository.ListMovieAdmin(pageSize, pageNumber, term);
+        }
+
         public async Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id)
         {
             return await _movieRepository.GetDetail(id);
         }
 
-        public async Task<ApiResponseModel<MovieAfterAddResponseDTO>> AddMovie(AddMovieDTO movie, CancellationToken cancellationToken)
+        public async Task<ApiResponseModel<string>> AddMovie(AddMovieDTO movie, CancellationToken cancellationToken)
         {
             return await _movieRepository.AddMovie(movie, cancellationToken);
         }

@@ -1,11 +1,16 @@
 ﻿using auhnuh_server.Application.IService;
+using auhnuh_server.Application.Service;
+using auhnuh_server.Domain.Common.ResponseModel;
+using auhnuh_server.Domain.Common;
 using auhnuh_server.Domain.DTO.WebRequest.Movie;
+using auhnuh_server.Domain.DTO.WebResponse.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using auhnuh_server.Domain.DTO.WebResponse.Movie;
 
 namespace auhnuh_server.API.Controllers
 {
-    [Route("api/movie")]
+    [Route("api/movies")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
@@ -15,7 +20,7 @@ namespace auhnuh_server.API.Controllers
             _movieService = movieService;
         }
 
-        [HttpGet("movies")]
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             var response = await _movieService.ListMovie();
@@ -26,6 +31,26 @@ namespace auhnuh_server.API.Controllers
             }
 
             return Ok(response);
+        }
+
+        [HttpGet("admin-movies")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAdminMovies(int pageSize, int pageNumber, string? term)
+        {
+            var response = await _movieService.ListMovieAdmin(pageSize, pageNumber, term);
+
+            var result = new ApiResponseModel<PagedModel<ListAllMovieDTO>>();
+
+            if (response == null)
+            {
+                result.Errors.Add("There is no movies!");
+                return BadRequest(result);
+            }
+            else
+            {
+                result.Data = response;
+                return Ok(result);
+            }
         }
 
         [HttpGet("movie-detail")]

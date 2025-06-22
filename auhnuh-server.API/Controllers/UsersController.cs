@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace auhnuh_server.API.Controllers
 {
-    [Route("api/user")]
+    [Route("api/users")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -18,7 +18,7 @@ namespace auhnuh_server.API.Controllers
             _userService = userService;
         }
 
-        [HttpGet("users")]
+        [HttpGet]
         public async Task<IActionResult> GetAllUserAdmin(int pageSize, int pageNumber, string? term)
         {
             var response = await _userService.ListUserAdmin(pageSize, pageNumber, term);

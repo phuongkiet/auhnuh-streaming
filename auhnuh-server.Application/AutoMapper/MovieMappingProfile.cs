@@ -15,7 +15,6 @@ namespace auhnuh_server.Application.AutoMapper
                 .ForMember(dest => dest.MovieCategories, opt => opt.MapFrom(src => src.MovieCategories != null
                             ? src.MovieCategories.Select(m => m.Categories != null ? m.Categories.Name : "Unknown").ToList()
                             : new List<string>()))
-                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()))
                 .ReverseMap();
 
             CreateMap<Movie, MovieDetailDTO>()
