@@ -11,6 +11,7 @@ namespace auhnuh_server.Application.IService
     {
         Task<ApiResponseModel<List<ListAllMovieDTO>>> ListMovie();
         Task<PagedModel<ListAllMovieDTO>> ListMovieAdmin(int pageSize, int pageNumber, string? term);
+        Task<PagedModel<ListAllMovieDTO>> ListMovieByCategory(int pageSize, int pageNumber, int? categoryId);
         Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id);
         Task<ApiResponseModel<string>> AddMovie(AddMovieDTO movie, CancellationToken cancellationToken);
     }

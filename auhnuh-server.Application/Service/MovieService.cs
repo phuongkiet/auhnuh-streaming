@@ -41,5 +41,10 @@ namespace auhnuh_server.Application.Service
         {
             return await _movieRepository.AddMovie(movie, cancellationToken);
         }
+
+        public async Task<PagedModel<ListAllMovieDTO>> ListMovieByCategory(int pageSize, int pageNumber, int? categoryId)
+        {
+            return await _movieRepository.ListMovieByCategory(pageSize, pageNumber, categoryId);
+        }
     }
 }

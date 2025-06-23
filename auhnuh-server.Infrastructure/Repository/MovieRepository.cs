@@ -98,6 +98,48 @@ namespace auhnuh_server.Infrastructure.Repository
             return pagedModel;
         }
 
+        public async Task<PagedModel<ListAllMovieDTO>> ListMovieByCategory(int pageSize, int pageNumber, int? categoryId)
+        {
+            if (pageSize == 0 && pageNumber == 0)
+            {
+                pageSize = 20;
+                pageNumber = 1;
+            }
+
+            IQueryable<Movie> query = _context.CreateSet<Movie>();
+
+            if (categoryId != null)
+            {
+                query = query.Where(m => m.MovieCategories.Any(mc => mc.CategoryId == categoryId));
+            }
+            else
+            {
+                query = query.AsQueryable();
+            }
+
+
+            var totalItems = await query.CountAsync();
+
+            var response = await query
+                .Skip(pageSize * (pageNumber - 1))
+                .Take(pageSize)
+                .ToListAsync();
+
+            var result = _mapper.Map<List<ListAllMovieDTO>>(response);
+
+            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+            var pagedModel = new PagedModel<ListAllMovieDTO>
+            {
+                PageNo = pageNumber,
+                TotalItems = totalItems,
+                TotalPage = totalPages,
+                Results = result,
+            };
+
+            return pagedModel;
+        }
+
         public async Task<ApiResponseModel<MovieDetailDTO>> GetDetail(int id)
         {
             var response = new ApiResponseModel<MovieDetailDTO>();
@@ -172,6 +214,6 @@ namespace auhnuh_server.Infrastructure.Repository
 
             response.Errors.Add("The movie is exist!");
             return response;
-        } 
+        }
     }
 }

@@ -53,6 +53,25 @@ namespace auhnuh_server.API.Controllers
             }
         }
 
+        [HttpGet("movies-by-category")]
+        public async Task<IActionResult> GetMoviesByCategory(int pageSize, int pageNumber, int? categoryId)
+        {
+            var response = await _movieService.ListMovieByCategory(pageSize, pageNumber, categoryId);
+
+            var result = new ApiResponseModel<PagedModel<ListAllMovieDTO>>();
+
+            if (response == null)
+            {
+                result.Errors.Add("There is no movies!");
+                return BadRequest(result);
+            }
+            else
+            {
+                result.Data = response;
+                return Ok(result);
+            }
+        }
+
         [HttpGet("movie-detail")]
         public async Task<IActionResult> GetDetail(int id)
         {
