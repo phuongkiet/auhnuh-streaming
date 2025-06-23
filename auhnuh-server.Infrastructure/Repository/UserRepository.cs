@@ -107,6 +107,7 @@ namespace auhnuh_server.Infrastructure.Repository
                 {
                     var entity = _mapper.Map<User>(userDTO);
                     entity.Status = UserStatus.Active;
+                    entity.CreatedAt = DateTime.Now;
 
                     await _context.CreateSet<User>().AddAsync(entity, cancellationToken);
                     await _context.SaveChangesAsync(cancellationToken);
@@ -149,6 +150,7 @@ namespace auhnuh_server.Infrastructure.Repository
                 user.Birthday = userDTO.Birthday;
                 user.Status = userDTO.Status;
                 user.RoleId = userDTO.RoleId;
+                user.UpdatedAt = DateTime.Now;
 
                 _context.CreateSet<User>().Update(user);
                 await _context.SaveChangesAsync(cancellationToken);
