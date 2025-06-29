@@ -34,7 +34,7 @@ namespace auhnuh_server.Infrastructure.Repository
 
         public async Task<PagedModel<UserDTO>> ListUserAdmin(int pageSize, int pageNumber, string? term)
         {
-            if (pageSize == 0 && pageNumber == 0) pageSize = int.MaxValue; pageNumber = 1;
+            if (pageSize == 0 && pageNumber == 0) pageSize = int.MaxValue;
 
             var query = _context.CreateSet<User>()
                 .Include(r => r.Role)

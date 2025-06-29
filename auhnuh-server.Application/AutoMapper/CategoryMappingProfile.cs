@@ -1,4 +1,5 @@
 ﻿using auhnuh_server.Domain;
+using auhnuh_server.Domain.DTO.WebRequest.Category;
 using auhnuh_server.Domain.DTO.WebResponse.Category;
 using AutoMapper;
 using System;
@@ -13,7 +14,10 @@ namespace auhnuh_server.Application.AutoMapper
     {
         public CategoryMappingProfile()
         {
-            CreateMap<Category, CategoryDto>().ReverseMap();
+            // Create Map<Request, Response>
+            CreateMap<Category, CategoryDTO>().ReverseMap();
+
+            CreateMap<RequestCategoryDTO, Category>().ReverseMap();
         }
     }
 }

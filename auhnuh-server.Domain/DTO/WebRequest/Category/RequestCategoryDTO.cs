@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace auhnuh_server.Domain.DTO.WebResponse.Category
+namespace auhnuh_server.Domain.DTO.WebRequest.Category
 {
-    public class CategoryDTO
+    public class RequestCategoryDTO
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

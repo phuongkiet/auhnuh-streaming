@@ -15,15 +15,10 @@ namespace auhnuh_server.Application.IService
     public interface IUserService
     {
         Task<PagedModel<UserDTO>> ListUserAdmin(int pageSize, int pageNumber, string? term);
-
         Task<ApiResponseModel<UserDTO>> GetUserById(int id);
-
         Task<ApiResponseModel<string>> AddUser(AddUserDTO userDTO, CancellationToken cancellationToken);
-
         Task<ApiResponseModel<string>> UpdateUser(int id, UpdateUserDTO userDTO, CancellationToken cancellationToken);
-
         Task<ApiResponseModel<string>> DeleteUser(int id, CancellationToken cancellationToken);
-
         Task<ApiResponseModel<string>> BanUser(int id, CancellationToken cancellationToken);
     }
 }

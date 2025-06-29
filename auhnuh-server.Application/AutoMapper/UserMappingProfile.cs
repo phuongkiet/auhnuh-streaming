@@ -14,6 +14,7 @@ namespace auhnuh_server.Application.AutoMapper
     {
         public UserMappingProfile()
         {
+            // Create Map<Request, Response>
             CreateMap<User, UserDTO>()
                 .ForMember(des => des.RoleName, opt => opt.MapFrom(src => src.Role.Name))
                 .ReverseMap();
