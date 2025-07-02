@@ -1,5 +1,11 @@
 ﻿using auhnuh_server.Application.IService;
+using auhnuh_server.Application.Service;
+using auhnuh_server.Domain.Common;
+using auhnuh_server.Domain.Common.ResponseModel;
 using auhnuh_server.Domain.DTO.WebRequest.Category;
+using auhnuh_server.Domain.DTO.WebResponse.Category;
+using auhnuh_server.Domain.DTO.WebResponse.Movie;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace auhnuh_server.API.Controllers
@@ -14,10 +20,30 @@ namespace auhnuh_server.API.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet]
+        [HttpGet("")]
         public async Task<IActionResult> GetCategories()
         {
             return Ok(await _categoryService.GetCategories());
+        }
+
+        [HttpGet("admin-categories")]
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ListCategoryAdmin(int pageSize = 10, int pageNumber = 1, string? term = null)
+        {
+            var response = await _categoryService.ListCategoryAdmin(pageSize, pageNumber, term);
+
+            var result = new ApiResponseModel<PagedModel<CategoryDTO>>();
+
+            if (response == null)
+            {
+                result.Errors.Add("There is no categories!");
+                return BadRequest(result);
+            }
+            else
+            {
+                result.Data = response;
+                return Ok(result);
+            }
         }
 
         [HttpGet("category-detail")]
